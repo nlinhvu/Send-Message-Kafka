@@ -1,0 +1,14 @@
+spring:
+  h2:
+    console:
+      enabled: true
+
+  cloud:
+    stream:
+      bindings:
+        psout:
+          destination: posts
+          producer.header-mode: raw
+        psin:
+          destination: posts
+          consumer.header-mode: raw
